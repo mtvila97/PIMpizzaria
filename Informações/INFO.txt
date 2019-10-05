@@ -1,0 +1,31 @@
+Funções de cada integrante:
+Henrique - Resp. Projeto, Modelagem
+Jair     - Modelagem Visual e gráfica;
+Matheus  - Modelagem do App 2 (Banco de dados), redes;
+Paloma   - Documentação, Manuais, Analise;
+Vinicius - Modelagem do App 1 (Geral);
+
+Henrique - Resp. Projeto, Modelagem do App 1 (Geral);
+Jair     - Relatórios
+Matheus  - Manuais, Redes;
+Paloma   - Documentação, Analise;
+Vinicius - Modelagem do App 2
+
+
+Principais Características:
+- Utilizar o MYSQL:
+https://dev.mysql.com/downloads/connector/c/                              //Download do libmysqlclient
+https://dev.mysql.com/doc/refman/5.7/en/c-api-function-overview.html      //Funcoes de API
+https://www.youtube.com/watch?v=rr2x_QGyoZo                               //Video tutorial 1
+https://www.youtube.com/watch?v=yNniOHn9Xe0                               //Video tutorial 2 (Visual Code)
+
+- Utilizar o teclado Numero para transição das telas:
+1 - Pedido
+2 - Estoque
+3 - Configurações
+
+- Fullscreen, Limitar as opções de teclas para o usuario;
+
+- Criar uma tela nas Configurações para as promoções:
+Criar promoção através de um código para Identificação.
+Deletar uma promoção.
