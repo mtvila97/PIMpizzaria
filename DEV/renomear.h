@@ -3,7 +3,7 @@ void renominarTE(){
    char oldname[] = "config.txt";
    char newname[] = "config.te";
    ret = rename(oldname, newname);
-   
+
 }
 
 void renominarTXT(){
@@ -11,5 +11,5 @@ void renominarTXT(){
    char oldname[] = "config.te";
    char newname[] = "config.txt";
    ret = rename(oldname, newname);
-   
+
 }

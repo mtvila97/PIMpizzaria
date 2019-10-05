@@ -1,10 +1,10 @@
-#include "renomear.h"
+//#include "renomear.h"
 
 void cadastroADM(){
-	//Definir variveis 
+	//Definir variveis
 	char userADM[9];
 	char passADM[9];
-	
+
 	//Salvar as informacoes
 	FILE *config;
 	config = fopen("config.txt", "w");
@@ -18,7 +18,4 @@ void cadastroADM(){
 	scanf("%s", &passADM);
 	fprintf(config, "%s", passADM);
 	fclose(config);
-	renominarTE();
 }
-
-

@@ -18,7 +18,7 @@ int main(){
 	//Inicio
 	config();
 	printf("Funcinou");
-	
+
 	return 0;
 }
 
@@ -27,9 +27,9 @@ void config(){
 	int use;
 	//Loc arquivo
 	FILE *tconfig;
-	tconfig = fopen("config.te", "r");
+	tconfig = fopen("config.txt", "r");
 	fclose(tconfig);
-	
+
 
 	// Veric arquivo
 	if(tconfig == NULL) {
@@ -54,6 +54,5 @@ void createConfig(){
 	createC = fopen("config.txt", "w");
 	fclose(createC);
 	cadastroADM();
-	
-}
 
+}
