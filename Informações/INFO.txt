@@ -16,3 +16,5 @@ Vinicius - Modelagem do App 2
 - Criar uma tela nas Configurações para as promoções:
 Criar promoção através de um código para Identificação.
 Deletar uma promoção.
+
+No PIM, resolvi nao utilizar mais o mysql, por causa do tempo, e iria ficar complexo demais o trabalho, que acabaria atrasando todo o processo.

@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <string.h>
+#include<windows.h>
+#include<conio.h>
+//Cabecarios
+#include "login.h"
+
 
 
 void config();
@@ -11,6 +17,7 @@ int main(){
 	setlocale(LC_ALL, "Portuguese");
 	//Inicio
 	config();
+	printf("Funcinou");
 	
 	return 0;
 }
@@ -20,13 +27,14 @@ void config(){
 	int use;
 	//Loc arquivo
 	FILE *tconfig;
-	tconfig = tconfig("config.txt", "r+");
+	tconfig = fopen("config.te", "r");
 	fclose(tconfig);
+	
 
 	// Veric arquivo
 	if(tconfig == NULL) {
-		printf("Configuração inicial não encontrada, Para configurar o programa\n");
-		printf("Digite 1 para Sim, e 2 para não \n");
+		printf("ConfiguraÃ§Ã£o inicial nÃ£o encontrada, Para configurar o programa\n");
+		printf("Digite 1 para Sim, e 2 para nï¿½o \n");
 		scanf("%d", &use);
 		system("cls");
 		if(use == 1) {
@@ -36,8 +44,8 @@ void config(){
 			exit(0);
 		}
 	}
-	
-	
+
+
 }
 
 //Cria o config.txt
@@ -45,5 +53,7 @@ void createConfig(){
 	FILE *createC;
 	createC = fopen("config.txt", "w");
 	fclose(createC);
-	main();
+	cadastroADM();
+	
 }
+
