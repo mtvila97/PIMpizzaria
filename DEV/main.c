@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-#include<windows.h>
-#include<conio.h>
+#include <windows.h>
+#include <conio.h>
+
 
 //Cabecarios
 #include "login.h"
@@ -13,41 +14,43 @@
 void config();
 void createConfig();
 
+
 int main(){
 	//Linguagem PTBR
 	setlocale(LC_ALL, "Portuguese");
 	//Inicio
-	config();W
-	printf("Funcinou");
-
-	return 0;
+	int i;
+	config();
+	loginADM();
 }
 
 
 void config(){
-	int use;
-	//Localiza o
+	int i;
+	//Localiza o config.txt
 	FILE *tconfig;
 	tconfig = fopen("config.txt", "r");
 	fclose(tconfig);
-
-
-	// Verifica se existe o config.txt na pasta do programa
-	//Caso o programa nao esteja configurado, ele ira criar um arquivo .txt que sera utilizado como banco de dados
-	if(tconfig == NULL) {
-		printf("ConfiguraÃ§Ã£o inicial nÃ£o encontrada, Para configurar o programa\n");
-		printf("Digite 1 para Sim, e 2 para nï¿½o \n");
-		scanf("%d", &use);
-		system("cls");
-		if(use == 1) {
-			//executa o void para criar o .txt
-			createConfig();
-		} else if( use == 2) {
+	
+	
+	//Verifica a existencia do config.txt
+	if(tconfig == NULL){
+		printf("O sistema não esta configurado. Deseja configurar ?\n");
+		printf("Digite : 1 - SIM | 2 - NÃO\n");
+		printf("Opção desejada: ");
+		scanf("%i" ,&i);
+	switch (i) {
+		case 1: 
+			system("cls");
+			cadastroADM();
+		case 2:
 			exit(0);
+			break;
+		default:
+			printf("Opção Inválida ");
+			config();
 		}
 	}
-
-
 }
 
 //Cria o config.txt (USado como bando de dados para o sistema de LOGIN)
@@ -59,3 +62,5 @@ void createConfig(){
 	cadastroADM();
 
 }
+
+
