@@ -4,6 +4,7 @@
 #include <string.h>
 #include<windows.h>
 #include<conio.h>
+
 //Cabecarios
 #include "login.h"
 
@@ -16,7 +17,7 @@ int main(){
 	//Linguagem PTBR
 	setlocale(LC_ALL, "Portuguese");
 	//Inicio
-	config();
+	config();W
 	printf("Funcinou");
 
 	return 0;
@@ -25,13 +26,14 @@ int main(){
 
 void config(){
 	int use;
-	//Loc arquivo
+	//Localiza o
 	FILE *tconfig;
 	tconfig = fopen("config.txt", "r");
 	fclose(tconfig);
 
 
-	// Veric arquivo
+	// Verifica se existe o config.txt na pasta do programa
+	//Caso o programa nao esteja configurado, ele ira criar um arquivo .txt que sera utilizado como banco de dados
 	if(tconfig == NULL) {
 		printf("Configuração inicial não encontrada, Para configurar o programa\n");
 		printf("Digite 1 para Sim, e 2 para n�o \n");
@@ -48,9 +50,10 @@ void config(){
 
 }
 
-//Cria o config.txt
+//Cria o config.txt (USado como bando de dados para o sistema de LOGIN)
 void createConfig(){
 	FILE *createC;
+	//Configura o arquivo tipo "W" para escrever
 	createC = fopen("config.txt", "w");
 	fclose(createC);
 	cadastroADM();
