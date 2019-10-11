@@ -6,6 +6,7 @@
 #include <conio.h>
 
 
+
 //Cabecarios
 #include "login.h"
 
@@ -60,7 +61,6 @@ void createConfig(){
 	createC = fopen("config.txt", "w");
 	fclose(createC);
 	cadastroADM();
-
 }
 
 
