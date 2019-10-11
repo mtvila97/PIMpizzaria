@@ -1,6 +1,6 @@
 Funções de cada integrante:
 Henrique - Resp. Projeto, Modelagem do App 1 (Geral);
-Jair     - Relatórios
+Jair     - Relatórios, Modelagem visual;
 Matheus  - Manuais, Redes;
 Paloma   - Documentação, Analise;
 Vinicius - Modelagem do App 2
